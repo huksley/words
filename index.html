@@ -1,65 +1,3 @@
-<button>know</button>
-<button>orchestration</button>
-<button>choreography</button>
-<button>intelligence</button>
-<button>understanding</button>
-<button>knowledge</button>
-<button>wisdom</button>
-<button>discovery</button>
-<button>colonel</button>
-<button>draught</button>
-<button>flabbergasted</button>
-<button>conundrum</button>
-<button>wallowing</button>
-<button>henceforth</button>
-<button>continuous</button>
-<button>obnoxious</button>
-<button>superficial</button>
-<button>arrogant</button>
-<button>ignorance</button>
-<button>teeming</button>
-<button>bespoke</button>
-<button>precipice</button>
-<button>poignant</button>
-<button>opinion</button>
-
-<!-- from https://raw.githubusercontent.com/ethan-w-roland/English-IPA/master/openDictUK.json -->
-<script src="openDictUK.js"></script>
-
-<style type="text/css">
-  span {
-    color: #909090;
-  }
-
-  button {
-    font-size: 1.5em;
-    height: 3em;
-    margin: 0.5em;
-    padding: 0.5em;
-  }
-</style>
-
-<script src="https://code.responsivevoice.org/responsivevoice.js?key=Pkwmd2TM"></script>
-
-<script>
-  const buttons = document.getElementsByTagName("button");
-  for (let i = 0; i < buttons.length; i++) {
-    const button = buttons.item(i);
-    button.__text = String(button.innerHTML);
-    button.innerHTML =
-      button.__text + " <span>" + dict[button.__text] + "</span>";
-    button.onclick = event => {
-      responsiveVoice.speak(button.__text, "UK English Male", {
-        pitch: 0.9,
-        rate: 0.9,
-        onend: () => {
-          button.blur();
-        }
-      });
-    };
-  }
-</script>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -85,6 +23,69 @@
     <meta property="og:locale" content="en_US" />
   </head>
   <body>
+    <button>know</button>
+    <button>orchestration</button>
+    <button>choreography</button>
+    <button>intelligence</button>
+    <button>understanding</button>
+    <button>knowledge</button>
+    <button>wisdom</button>
+    <button>discovery</button>
+    <button>colonel</button>
+    <button>draught</button>
+    <button>flabbergasted</button>
+    <button>conundrum</button>
+    <button>wallowing</button>
+    <button>henceforth</button>
+    <button>continuous</button>
+    <button>obnoxious</button>
+    <button>superficial</button>
+    <button>arrogant</button>
+    <button>ignorance</button>
+    <button>teeming</button>
+    <button>bespoke</button>
+    <button>precipice</button>
+    <button>poignant</button>
+    <button>opinion</button>
+    <button>justification</button>
+    <button>justice</button>
+
+    <!-- from https://raw.githubusercontent.com/ethan-w-roland/English-IPA/master/openDictUK.json -->
+    <script src="openDictUK.js"></script>
+
+    <style type="text/css">
+      span {
+        color: #909090;
+      }
+
+      button {
+        font-size: 1.5em;
+        height: 3em;
+        margin: 0.5em;
+        padding: 0.5em;
+      }
+    </style>
+
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Pkwmd2TM"></script>
+
+    <script>
+      const buttons = document.getElementsByTagName("button");
+      for (let i = 0; i < buttons.length; i++) {
+        const button = buttons.item(i);
+        button.__text = String(button.innerHTML);
+        button.innerHTML =
+          button.__text + " <span>" + dict[button.__text] + "</span>";
+        button.onclick = event => {
+          responsiveVoice.speak(button.__text, "UK English Male", {
+            pitch: 0.9,
+            rate: 0.9,
+            onend: () => {
+              button.blur();
+            }
+          });
+        };
+      }
+    </script>
     <a
       class="github-fork-ribbon"
       href="https://github.com/huksley/words"
