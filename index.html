@@ -1,0 +1,55 @@
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=Pkwmd2TM"></script>
+
+<button>know</button>
+<button>orchestration</button>
+<button>choreography</button>
+<button>intelligence</button>
+<button>understanding</button>
+<button>knowledge</button>
+<button>wisdom</button>
+
+<script>
+  const buttons = document.getElementsByTagName("button");
+  for (let i = 0; i < buttons.length; i++) {
+    const button = buttons.item(i);
+    button.onclick = event => {
+      responsiveVoice.speak(event.target.innerHTML);
+    };
+  }
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My social app</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css"
+    />
+    <meta
+      name="description"
+      content="Learn prononcuation of English words interactively by listening how they are pronounced properly"
+    />
+    <meta property="og:title" content="Learn prononcuation of English words" />
+    <meta
+      property="og:description"
+      content="Learn prononcuation of English words interactively by listening how they are pronounced properly"
+    />
+    <meta property="og:url" content="https://huksley.github.io/words/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+  </head>
+  <body>
+    <a
+      class="github-fork-ribbon"
+      href="https://github.com/huksley/words"
+      data-ribbon="Fork me on GitHub"
+      title="Fork me on GitHub"
+    >
+      Fork me on GitHub
+    </a>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "short_name": "words",
+  "name": "Learn prononcuation of English words",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "gcm_sender_id": "103953800507"
+}
