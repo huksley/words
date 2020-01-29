@@ -48,8 +48,13 @@
     button.innerHTML =
       button.__text + " <span>" + dict[button.__text] + "</span>";
     button.onclick = event => {
-      alert(button.__text);
-      responsiveVoice.speak(button.__text);
+      responsiveVoice.speak(button.__text, "UK English Male", {
+        pitch: 0.9,
+        rate: 0.9,
+        onend: () => {
+          button.blur();
+        }
+      });
     };
   }
 </script>
